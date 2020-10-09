@@ -3,14 +3,14 @@
 #include "Arduino.h"
 
 class RGB{
-       extern int r,g,b;
-   extern     int color[3];
-     extern   int rv,gv,bv;
-        void RGB_pinMode(r,g,b);
         
-        void RGB_write_by_string( color[]);
+ public:
+    
+        void RGB_pinMode( int r,  int g, int b);
+        
+        void RGB_write_by_string( char color);
 
-        void RGB_write_by_values(rv,gv,bv);
+        void RGB_write_by_values( int rv, int  gv, int bv);
 
 
 
