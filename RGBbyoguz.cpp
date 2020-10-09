@@ -2,8 +2,9 @@
 int _r;
 int _g;
 int _b;
-char _color[]=color[];
-RGB::RGB_pinMode(r,g,b){
+
+
+void RGB::RGB_pinMode(int r,int g,int b){
     
     
     pinMode(r,OUTPUT);
@@ -14,53 +15,53 @@ _r=r;
     _b=b;
 }
 
-RGB::RGB_write_by_string( color[])
+void RGB::RGB_write_by_string( char color)
 {
-switch(color[])
+switch(color)
 {
-case "white":
+case 'w':
 analogWrite(_r,255);
 analogWrite(_g,255);
 analogWrite(_b,255);
 
 
 break;
-case "lime":
+case 'l':
 analogWrite(_r,0);
 analogWrite(_g,255);
 analogWrite(_b,0);
 
 
 break;
-case "Red":
+case 'r':
 analogWrite(_r,255);
 analogWrite(_g,0);
 analogWrite(_b,0);
 
 
 break;
-case "blue":
+case 'b':
 analogWrite(_r,0);
 analogWrite(_g,0);
 analogWrite(_b,255);
 
 
 break;
-case "yellow":
+case 'y':
 analogWrite(_r,255);
 analogWrite(_g,255);
 analogWrite(_b,0);
 
 
 break;
-case "cyan":
+case 'c':
 analogWrite(_r,0);
 analogWrite(_g,255);
 analogWrite(_b,255);
 
 
 break;
-case "magenta":
+case 'm':
 analogWrite(_r,255);
 analogWrite(_g,0);
 analogWrite(_b,255);
@@ -84,8 +85,8 @@ break;
 
 
 
-}
- void RGB::RGB_write_by_values( rv, gv, bv){
+}}
+ void RGB::RGB_write_by_values(int rv,int gv,int bv){
 
 analogWrite(_r,rv);
 analogWrite(_g,gv);
@@ -98,4 +99,4 @@ analogWrite(_b,bv);
 
 
 
-}
+
